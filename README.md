@@ -71,6 +71,20 @@ To run all unit tests execute:
 ctest -VV
 ```
 
+### Installing python wrappers
+
+To install the python wrappers, make sure that the environment variable linking to the installed path (`/foo/bar/myinstalldir`) is added to the `.profile`
+
+```
+export PARALLELPROJ_C_LIB="/foo/bar/myinstalldir/lib/libparallelproj_c"
+export PARALLELPROJ_CUDA_LIB="/foo/bar/myinstalldir/lib/libparallelproj_cuda"
+```
+And run the python script in the right python virtual environment, in this root folder (`my_project_dir`)
+
+```
+pip install -e .
+```
+
 ### Setting CMAKE_CUDA_ARCHITECTURES
 
 If you have CUDA available on your system (even if there is no physical CUDA GPU),
